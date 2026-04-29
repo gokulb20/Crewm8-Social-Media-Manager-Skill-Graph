@@ -1,260 +1,309 @@
-# Crewm8 Social Media Manager Skill Pack
+# Crewm8 Social Skill Graph
 
-**A comprehensive, granular skill pack for Hermes Agent covering all 12 functions of startup social media management.** 37 discrete SKILL.md files organized by category with cross-references, platform-specific formatting rules, and chained workflow support.
+**A complete social media operator's playbook — 37 skills, 12 functions, any agent.**
 
-> Built by [Crewm8](https://crewm8.ai) — a skill pack freely available for all Hermes Agents.
+> Built by [Crewm8](https://crewm8.ai) — a free, open-source skill graph for the agent ecosystem. Works with Hermes Agent, Claude Code, Factory Droid, Cursor, Windsurf, OpenAI agents, and any markdown-skill-aware agent.
 
 ---
 
-## About
+## What This Is
 
-This skill pack is offered by **Crewm8** ([crewm8.ai](https://crewm8.ai)) as a free, open-source resource for the Hermes Agent ecosystem. It provides a complete social media management capability — from brand strategy and content creation through publishing, engagement, analytics, and crisis management — across X, LinkedIn, Instagram, and TikTok.
+37 discrete, agent-agnostic skills covering every function of startup social media management — from brand strategy and content creation through publishing, engagement, analytics, and crisis management. Each skill works independently and chains together for automated workflows.
 
-- **Repository:** [github.com/gokulb20/Crewm8-Social-Media-Manager-Skill-Graph](https://github.com/gokulb20/Crewm8-Social-Media-Manager-Skill-Graph)
-- **Built by:** [Crewm8](https://crewm8.ai)
-- **License:** MIT
+- **37 SKILL.md files** organized into 12 categories
+- **4 platforms:** X, LinkedIn, Instagram, TikTok
+- **Agent-agnostic:** No agent-specific metadata. Universal YAML format.
+- **Open source:** MIT license. Built by Crewm8. Free for any agent to use.
+
+---
+
+## About Crewm8
+
+[Crewm8](https://crewm8.ai) builds autonomous agents for go-to-market operations. This skill graph is our gift to the agent ecosystem — a complete, production-tested set of social media management capabilities that any agent can load and use immediately.
+
+---
+
+## Skill Graph
+
+This is the dependency graph showing how skills chain together in a typical weekly workflow:
+
+```mermaid
+flowchart TD
+  BV["brand-voice-system"]
+  PS["positioning-statement"]
+  CP["content-pillars"]
+  CT["cadence-timing"]
+  CC["content-calendar"]
+  TM["trend-monitor"]
+  HW["hook-write"]
+  PC["post-create"]
+  TC["thread-create"]
+  CW["caption-draft"]
+  CA["cta-craft"]
+  BTT["blog-to-thread"]
+  PTC["podcast-to-clips"]
+  NTP["newsletter-to-posts"]
+  VP["visual-plan"]
+  IP["image-prompt"]
+  AF["asset-format"]
+  MC["meme-create"]
+  DR["draft-review"]
+  TS["thread-structure"]
+  SQ["schedule-queue"]
+  XP["cross-post-adapt"]
+  CR["comment-reply"]
+  DM["dm-respond"]
+  MM["mention-monitor"]
+  IO["influencer-outreach"]
+  EP["engagement-poll"]
+  NR["news-response"]
+  TB["trending-briefing"]
+  MT["metrics-track"]
+  AB["ab-test-analyze"]
+  PR["performance-report"]
+  CRS["crisis-respond"]
+  AP["apology-draft"]
+  IM["impersonator-monitor"]
+  PA["profile-audit"]
+  PRF["presence-refresh"]
+
+  BV --> CC
+  PS --> CC
+  CP --> CC
+  CT --> CC
+  TM --> CC
+  CC --> HW
+  HW --> PC
+  HW --> TC
+  HW --> CW
+  PC --> CA
+  TC --> CA
+  CW --> CA
+  BTT --> TC
+  PTC --> PC
+  NTP --> PC
+  VP --> IP
+  VP --> AF
+  VP --> MC
+  PC --> DR
+  TC --> DR
+  CW --> DR
+  DR --> TS
+  DR --> SQ
+  TS --> SQ
+  SQ --> XP
+  SQ --> CR
+  CR --> DM
+  CR --> MM
+  MM --> CRS
+  CRS --> AP
+  CRS --> IM
+  SQ --> MT
+  MT --> AB
+  MT --> PR
+  PR --> TB
+  PA --> PRF
+  IO --> CR
+  EP --> PC
+  NR --> PC
+```
 
 ---
 
 ## Installation
 
-### Option 1: Install via Hermes tap (recommended)
-
+### Hermes Agent
 ```bash
 hermes skills tap add gokulb20/Crewm8-Social-Media-Manager-Skill-Graph
+hermes skills install gokulb20/.../skills/strategy/brand-voice-system
 ```
 
-Then install individual skills as needed:
-
+### Claude Code
 ```bash
-hermes skills install gokulb20/Crewm8-Social-Media-Manager-Skill-Graph/skills/strategy/brand-voice-system
+git clone https://github.com/gokulb20/Crewm8-Social-Media-Manager-Skill-Graph.git ~/.crew-skills
+ln -s ~/.crew-skills/skills /path/to/project/.claude/skills/
 ```
 
-### Option 2: Copy directly to Hermes skills directory
-
+### Factory Droid
 ```bash
-git clone https://github.com/gokulb20/Crewm8-Social-Media-Manager-Skill-Graph.git
-cp -r Crewm8-Social-Media-Manager-Skill-Graph/skills/* ~/.hermes/skills/
+cp -r ~/.crew-skills/skills/* .factory/skills/       # project-level
+cp -r ~/.crew-skills/skills/* ~/.factory/skills/      # personal-level
 ```
 
-## Skill Index
+### Cursor / Windsurf
+```bash
+ln -s ~/.crew-skills/skills /path/to/project/.cursor/skills/
+# Reference in .cursorrules: "You have social media skills at ~/.crew-skills/skills/"
+```
 
-### Category: Strategy
+### OpenAI agents / Custom GPTs
+Upload individual SKILL.md files as knowledge base documents. No special configuration needed.
 
-| # | Skill | Description |
-|---|-------|-------------|
-| 1 | brand-voice-system | Extract brand voice, build do/don't guide, detect drift |
-| 2 | positioning-statement | Craft elevator pitch and niche positioning |
-| 3 | content-pillars | Define 3-5 content pillars and topic taxonomy |
+### Any markdown-aware agent
+Point your agent at the `skills/` directory. Flat YAML frontmature (`name`, `description`, `tags`) is the universal standard.
 
-### Category: Planning
-
-| # | Skill | Description |
-|---|-------|-------------|
-| 4 | content-calendar | Weekly/monthly day-by-day content plan |
-| 5 | cadence-timing | Posting frequency and per-platform best times |
-
-### Category: Creation
-
-| # | Skill | Description |
-|---|-------|-------------|
-| 6 | post-create | Platform-native single posts for all four platforms |
-| 7 | thread-create | Multi-tweet X threads with hooks, pacing, and CTAs |
-| 8 | hook-write | Generate 5-10 hook variations for any content |
-| 9 | cta-craft | Select and write optimal call-to-action per post |
-
-### Category: Repurpose
-
-| # | Skill | Description |
-|---|-------|-------------|
-| 10 | blog-to-thread | Blog post / newsletter into X thread |
-| 11 | podcast-to-clips | Podcast transcripts into multi-platform social assets |
-| 12 | newsletter-to-posts | Newsletter edition into standalone posts |
-
-### Category: Visual
-
-| # | Skill | Description |
-|---|-------|-------------|
-| 13 | visual-plan | Carousel slide-by-slide copy, banners, quote cards |
-| 14 | meme-create | Branded meme concepts with text overlay and posting context |
-| 15 | image-prompt | AI image prompts for Midjourney, DALL-E, SDXL |
-| 16 | asset-format | Platform dimensions, safe zones, export settings |
-
-### Category: Captions
-
-| # | Skill | Description |
-|---|-------|-------------|
-| 17 | caption-draft | IG and LinkedIn captions with hooks, body, CTAs, hashtags |
-
-### Category: Publishing
-
-| # | Skill | Description |
-|---|-------|-------------|
-| 18 | schedule-queue | Queue posts to scheduling tools per platform timing |
-| 19 | cross-post-adapt | One piece of content into platform-native variants |
-| 20 | thread-structure | Thread sequencing, auto-plug, link placement rules |
-| 21 | draft-review | Draft review queue + founder sign-off checklist |
-
-### Category: Engagement
-
-| # | Skill | Description |
-|---|-------|-------------|
-| 22 | comment-reply | Replies on own posts + value-add comments on others' |
-| 23 | dm-respond | DM triage with categorization and response drafts |
-| 24 | mention-monitor | Detect brand mentions, reply within 2-4 hours |
-| 25 | influencer-outreach | Micro-influencer identification + cold outreach |
-| 26 | engagement-poll | Design polls and audience questions |
-
-### Category: Trends
-
-| # | Skill | Description |
-|---|-------|-------------|
-| 27 | trend-monitor | Daily scan of trending topics, formats, hashtags |
-| 28 | news-response | Quick-response posts to industry news |
-| 29 | trending-briefing | Daily/weekly "what's trending" briefing for founder |
-
-### Category: Analytics
-
-| # | Skill | Description |
-|---|-------|-------------|
-| 30 | metrics-track | Post-level metrics tracking across all platforms |
-| 31 | ab-test-analyze | A/B test analysis with winner declaration |
-| 32 | performance-report | Weekly/monthly performance summary reports |
-
-### Category: Crisis
-
-| # | Skill | Description |
-|---|-------|-------------|
-| 33 | crisis-respond | Detect trolls, draft calm responses, escalation rules |
-| 34 | apology-draft | Apology and correction posts with tone calibration |
-| 35 | impersonator-monitor | Detect fake accounts, draft platform report copy |
-
-### Category: Profile
-
-| # | Skill | Description |
-|---|-------|-------------|
-| 36 | profile-audit | Cross-platform consistency check |
-| 37 | presence-refresh | Bio optimization, pinned post rotation, banner updates |
+Full per-agent install guides: `docs/install-*.md`
 
 ---
 
-## Function to Skill Mapping
+## Skill Index
 
-| Function (from spec) | Skills that cover it |
-|----------------------|---------------------|
-| 1. Financial Operations | (Not covered — finance-specific; this pack is content/strategy/engagement) |
-| 2. Content Creation | post-create, thread-create, hook-write, cta-craft |
-| 3. Repurposing | blog-to-thread, podcast-to-clips, newsletter-to-posts |
-| 4. Visual Assets | visual-plan, meme-create, image-prompt, asset-format |
-| 5. Captions | caption-draft |
-| 6. Scheduling & Publishing | schedule-queue, cross-post-adapt, thread-structure, draft-review |
-| 7. Community Engagement | comment-reply, dm-respond, mention-monitor, influencer-outreach, engagement-poll |
-| 8. Trend Monitoring | trend-monitor, news-response, trending-briefing |
-| 9. Analytics & Reporting | metrics-track, ab-test-analyze, performance-report |
-| 10. Crisis Management | crisis-respond, apology-draft, impersonator-monitor |
-| 11. Profile Optimization | profile-audit, presence-refresh |
-| 12. Brand Strategy | brand-voice-system, positioning-statement, content-pillars |
+### Strategy
+| # | Skill | Description | Inputs Required | Delivers |
+|---|-------|-------------|----------------|----------|
+| 1 | brand-voice-system | Extract brand voice, build do/don't guide, detect drift | Content samples, founder voice refs | Voice guide document |
+| 2 | positioning-statement | Craft elevator pitch and niche positioning | Brand materials, customer interviews | Positioning document |
+| 3 | content-pillars | Define 3-5 pillars and topic taxonomy | Positioning, audience insights | Pillar document + topic bank |
+
+### Planning
+| # | Skill | Description | Inputs Required | Delivers |
+|---|-------|-------------|----------------|----------|
+| 4 | content-calendar | Weekly/monthly day-by-day content plan | Pillars, cadence, key dates | Content calendar |
+| 5 | cadence-timing | Posting frequency and per-platform best times | Audience data, analytics | Cadence guide |
+
+### Creation
+| # | Skill | Description | Inputs Required | Delivers |
+|---|-------|-------------|----------------|----------|
+| 6 | post-create | Platform-native single posts for all 4 platforms | Topic, voice guide, platform | Formatted post text |
+| 7 | thread-create | Multi-tweet X threads with hooks and CTAs | Source material, CTA | Thread draft + auto-plug config |
+| 8 | hook-write | Generate 5-10 hook variations per post | Core idea, platform | Hook variations with scores |
+| 9 | cta-craft | Select and write optimal CTA per post | Post goal, value level, platform | CTA text + rationale |
+
+### Repurpose
+| # | Skill | Description | Inputs Required | Delivers |
+|---|-------|-------------|----------------|----------|
+| 10 | blog-to-thread | Blog post/newsletter into X thread | Blog text, CTA | Thread draft + traffic strategy |
+| 11 | podcast-to-clips | Podcast transcripts into multi-platform assets | Transcript, guest info | Clip inventory + posting schedule |
+| 12 | newsletter-to-posts | Newsletter into standalone social posts | Newsletter text, subscribe link | Multi-post package |
+
+### Visual
+| # | Skill | Description | Inputs Required | Delivers |
+|---|-------|-------------|----------------|----------|
+| 13 | visual-plan | Carousel slide-by-slide copy, banners, quote cards | Message, brand guidelines, platform | Visual brief with specs |
+| 14 | meme-create | Branded meme concepts with text overlay | Context, humor style, platform | Meme concept + risk assessment |
+| 15 | image-prompt | AI image prompts for Midjourney/DALL-E/SDXL | Concept, style, ratio | Generation prompts for 1-3 tools |
+| 16 | asset-format | Platform dimensions, safe zones, export settings | Platform, content type | Format spec |
+
+### Captions
+| # | Skill | Description | Inputs Required | Delivers |
+|---|-------|-------------|----------------|----------|
+| 17 | caption-draft | IG and LinkedIn captions with hooks and hashtags | Visual, message, platform | Platform-formatted caption |
+
+### Publishing
+| # | Skill | Description | Inputs Required | Delivers |
+|---|-------|-------------|----------------|----------|
+| 18 | schedule-queue | Queue posts to scheduling tools | Approved posts, times, media | Publishing queue |
+| 19 | cross-post-adapt | Multi-platform adaptation (no copy-paste) | Source content, target platforms | Native adaptations per platform |
+| 20 | thread-structure | Thread sequencing, auto-plug rules | Draft thread, link | Sequence spec + auto-plug config |
+| 21 | draft-review | Founder review queue with sign-off checklist | Drafts, review cadence | Review queue with status |
+
+### Engagement
+| # | Skill | Description | Inputs Required | Delivers |
+|---|-------|-------------|----------------|----------|
+| 22 | comment-reply | Replies on own posts + value-add on others' | Comments, target accounts | Reply drafts |
+| 23 | dm-respond | DM triage with categorization and response drafts | Inbound DMs | DM responses + escalation |
+| 24 | mention-monitor | Track brand mentions, reply within 2-4 hours | Brand handles, keywords | Mention report |
+| 25 | influencer-outreach | Micro-influencer identification + outreach drafts | Brand positioning, offer | Outreach shortlist + drafts |
+| 26 | engagement-poll | Design polls and audience questions | Poll purpose, platform | Poll + follow-up plan |
+
+### Trends
+| # | Skill | Description | Inputs Required | Delivers |
+|---|-------|-------------|----------------|----------|
+| 27 | trend-monitor | Daily trend scan with fit matrix scoring | Niche, accounts to monitor | Trend report with recommendations |
+| 28 | news-response | Quick-response posts to industry news | News item, positioning | Response draft |
+| 29 | trending-briefing | Daily/weekly founder briefing | Trend + news outputs | Founder briefing |
+
+### Analytics
+| # | Skill | Description | Inputs Required | Delivers |
+|---|-------|-------------|----------------|----------|
+| 30 | metrics-track | Track post-level metrics with anomaly detection | Platform analytics | Metrics snapshot |
+| 31 | ab-test-analyze | A/B test analysis with winner declaration | Hypothesis, results | Test analysis |
+| 32 | performance-report | Weekly/monthly performance summaries | Metrics, A/B results, calendar | Performance report |
+
+### Crisis
+| # | Skill | Description | Inputs Required | Delivers |
+|---|-------|-------------|----------------|----------|
+| 33 | crisis-respond | Detect and respond to PR issues | Situation, escalation contacts | Response plan |
+| 34 | apology-draft | Apology/correction posts with tone calibration | Situation, founder availability | Apology draft |
+| 35 | impersonator-monitor | Detect fake accounts, manage takedowns | Brand handles | Detection report |
+
+### Profile
+| # | Skill | Description | Inputs Required | Delivers |
+|---|-------|-------------|----------------|----------|
+| 36 | profile-audit | Cross-platform consistency check | Profile URLs | Audit + remediation plan |
+| 37 | presence-refresh | Bio optimization + pinned post rotation | Current state, campaign schedule | Refresh plan |
 
 ---
 
 ## Chained Workflow: Weekly Content Cycle
 
-This is how skills chain together for a typical week:
-
-```
-brand-voice-system + positioning-statement + content-pillars
-        |
-        v
-    cadence-timing
-        |
-        v
-  content-calendar  <── trend-monitor (injects trending opportunities)
-        |
-        v
-  post-create + thread-create + caption-draft
-        |
-        v
-  blog-to-thread / podcast-to-clips / newsletter-to-posts (repurpose into more posts)
-        |
-        v
-  visual-plan + image-prompt + asset-format (if visuals needed)
-        |
-        v
-  draft-review (founder sign-off gate)
-        |
-        v
-  thread-structure (if threads) + schedule-queue
-        |
-        v
-  [POSTS GO LIVE]
-        |
-        v
-  comment-reply + dm-respond + mention-monitor (daily engagement)
-        |
-        v
-  metrics-track (daily pulls)
-        |
-        v
-  performance-report + ab-test-analyze (weekly review)
-        |
-        v
-  trending-briefing (founder update)
-        |
-        v
-  profile-audit + presence-refresh (monthly/quarterly)
-```
+1. **Sunday/Monday morning:** `trend-monitor` → `content-calendar` (inject trending opportunities into the week's plan)
+2. **Monday:** Run creation skills (`hook-write` → `post-create`, `thread-create`, `caption-draft`)
+3. **Monday-Tuesday:** Repurpose existing content (`blog-to-thread`, `podcast-to-clips`, `newsletter-to-posts`)
+4. **Tuesday:** Plan visuals if needed (`visual-plan` → `image-prompt` / `asset-format`)
+5. **Tuesday-Wednesday:** `draft-review` gate (founder sign-off)
+6. **Wednesday:** Structure and schedule (`thread-structure` → `schedule-queue`)
+7. **Daily (ongoing):** `comment-reply` + `dm-respond` + `mention-monitor` for engagement
+8. **Friday:** `metrics-track` → `performance-report` → `trending-briefing`
+9. **Monthly:** `profile-audit` → `presence-refresh`
 
 ---
 
 ## Platform Coverage
 
-Every applicable skill includes platform-specific guidance for:
+Every applicable skill includes platform-specific guidance for X, LinkedIn, Instagram, and TikTok:
 
-- **X (Twitter):** 280-character limit, no markdown, line-break formatting, link placement rules, thread structure
-- **LinkedIn:** 3,000-character limit, professional tone adjustment, carousel/PDF format, hashtag conventions
-- **Instagram:** 2,200-character caption limit, visual-first, story format, link-in-bio constraints, hashtag strategy
-- **TikTok:** Video-first, 9:16 format, text overlay timing, caption secondary to visual, trending audio integration
+| Dimension | X | LinkedIn | Instagram | TikTok |
+|-----------|---|----------|-----------|--------|
+| Character limit | 280 | 3,000 | 2,200 | 4,000 (caption) |
+| Link placement | Final tweet or reply | Anywhere after hook | Bio link only | Bio link only |
+| Best format | Threads, short posts | Carousels, story posts | Visuals + captions, Stories | Video-first |
+| Hashtag density | 0-1 | 3-5 | 5-10 | 3-5 |
+| Image aspect ratio | 16:9 | 4:5 (carousel) | 4:5 or 1:1 | 9:16 |
 
 ---
 
-## Skill Format Reference
+## SKILL.md Format Reference
 
-Every SKILL.md follows the Hermes Agent specification:
+Every skill uses the universal agent-agnostic format:
 
 ```yaml
 ---
 name: skill-name
-description: One-sentence description
-version: 1.0.0
-author: Gokul
+description: Action-oriented one-line description (used by agents for skill matching)
+version: 2.0.0
+author: Crewm8
+maintainer: Gokul (github.com/gokulb20)
 license: MIT
-metadata:
-  hermes:
-    tags: [Social, Category, Keywords]
-    related_skills: [other-skill-names]
+homepage: https://crewm8.ai
+tags: [social, category, keywords]
+related_skills: [other-skill-names]
+inputs_required: [what-the-agent-needs-before-starting]
+deliverables: [what-the-skill-produces]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+requires_capabilities: [text-generation]  # optional
 ---
 ```
 
-Body sections: **When to Use → Quick Reference → Procedure → Output Format → Pitfalls → Verification**
-
-See [Hermes Agent Skill Creation Guide](https://hermes-agent.nousresearch.com/docs/developer-guide/creating-skills) for full documentation.
+Body sections: **Purpose → When to Use → Inputs Required → Quick Reference → Procedure → Output Format → Platform Notes → Done Criteria → Pitfalls → Verification → Example**
 
 ---
 
-## Contributors
+## License & Credits
 
-- **Gokul** — [github.com/gokulb20](https://github.com/gokulb20)
-- Built with [Factory Droid](https://factory.ai)
+- **License:** MIT — free to use, modify, and distribute
+- **Built by:** [Crewm8](https://crewm8.ai)
+- **Repository:** [github.com/gokulb20/Crewm8-Social-Media-Manager-Skill-Graph](https://github.com/gokulb20/Crewm8-Social-Media-Manager-Skill-Graph)
 
 ---
 
 ## Stats
 
-- **Total skills:** 37
-- **Categories:** 12
-- **Platforms covered:** X, LinkedIn, Instagram, TikTok
-- **Approximate total content:** ~11,000 lines of skill instruction
-
----
-
-Built by [Crewm8](https://crewm8.ai) — a free, open-source skill pack for the Hermes Agent ecosystem.
+| | |
+|---|---|
+| Skills | 37 |
+| Categories | 12 |
+| Platforms | 4 (X, LinkedIn, IG, TikTok) |
+| Compatible agents | All major markdown-skill-aware agents |
+| Lines of instruction | ~11,000 |
+| License | MIT |

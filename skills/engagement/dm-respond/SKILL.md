@@ -1,85 +1,66 @@
 ---
 name: dm-respond
-description: Draft DM responses to inbound messages with categorization (sales, support, collaboration, spam) and appropriate tone, routing, and escalation rules.
-version: 1.0.0
-author: Gokul
+description: Draft DM responses to inbound messages with categorization and appropriate tone — sales, support, collaboration, spam — and escalation rules for the founder.
+version: 2.0.0
+author: Crewm8
+maintainer: Gokul (github.com/gokulb20)
 license: MIT
-metadata:
-  hermes:
-    tags: [Social, Engagement, DMs, Customer-Service, Triage]
-    related_skills: [comment-reply, mention-monitor, crisis-respond]
+homepage: https://crewm8.ai
+tags: [social, engagement, dms, customer-service, triage, founder]
+related_skills: [comment-reply, mention-monitor, crisis-respond]
+inputs_required: [inbound-dms-across-platforms, existing-response-templates-if-any]
+deliverables: [dm-responses-per-category-with-escalation-decisions]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
 ---
 
 # DM Respond
 
 Triage and draft responses to direct messages across platforms. DMs are high-trust interactions — a good DM response can convert a prospect or save a customer. A bad or ignored DM erodes that trust permanently.
 
+## Purpose
+
+The DM inbox is where real relationships happen. But it's also where spam, support tickets, sales inquiries, and fan mail all pile up together. This skill separates them, prioritizes them, and drafts appropriate responses so nothing falls through the cracks.
+
 ## When to Use
 
-- Daily DM inbox check (across X, LinkedIn, Instagram, TikTok)
-- New inbound message requires categorization and response draft
-- Founder is overwhelmed by DM volume and needs triage
-- DM is sensitive (angry customer, legal concern, partnership offer) — needs escalation
-- Building response templates for common DM types to speed up future replies
+- Daily DM inbox check (all platforms)
+- New inbound message needs categorization
+- Founder overwhelmed by DM volume
+- Sensitive DM (angry customer, legal concern) — needs escalation
+
+## Inputs Required
+
+- All new DMs across platforms
+- Brand voice guide (DM voice should feel like the founder typing)
+- Escalation contacts (founder, support email)
 
 ## Quick Reference
 
-| Category | Priority | Response Time | Tone | Escalation Rule |
-|----------|---------|--------------|------|----------------|
-| Sales inquiry | High | Within 2 hours | Helpful, informative, warm | Route to founder if high-value prospect |
-| Support / complaint | Critical | Within 1 hour | Empathetic, solution-focused, calm | Escalate if technical or account-specific |
-| Collaboration / partnership | Medium | Within 24 hours | Professional, open, qualifying | Route to founder with summary |
-| Spam / irrelevant | Low | Ignore or block | N/A | Do not engage |
-| Personal / founder connection | Medium | Within 24 hours | Personal, warm | Forward to founder directly |
-| Press / media inquiry | High | Within 4 hours | Professional, prepared | Route to founder immediately |
+| Category | Priority | Response Time | Tone | Escalate? |
+|----------|---------|--------------|------|-----------|
+| Sales inquiry | High | Within 2 hours | Helpful, informative | Route if high-value prospect |
+| Support / complaint | Critical | Within 1 hour | Empathetic, solution-focused | If technical or account-specific |
+| Collaboration | Medium | Within 24 hours | Professional, open, qualifying | Route with summary |
+| Spam / irrelevant | Low | Ignore or block | N/A | No |
+| Personal / founder connection | Medium | Within 24 hours | Warm, personal | Forward to founder |
+| Press / media | High | Within 4 hours | Professional, prepared | Immediate escalation |
 
 ## Procedure
 
-1. Review new DMs across all platforms (minimum daily; ideally 2x/day during business hours).
+1. **Review new DMs** across all platforms daily (ideally 2x/day during business hours).
 
-2. Categorize each message using the Quick Reference table.
+2. **Categorize each message** using the Quick Reference table.
 
-3. For each category, draft an appropriate response:
+3. **Draft the response:**
+   - Sales: acknowledge their interest, provide helpful info, offer next step. Collect context for routing.
+   - Support: acknowledge frustration first (not solution). Apologize if appropriate. Ask clarifying questions. Escalate if needed.
+   - Collaboration: thank them, ask qualifying questions. Don't commit in first reply. Route with summary.
+   - Spam: do not engage. Block/report if aggressive.
+   - Personal: flag for founder to reply. If unclear, ask gentle qualifying question.
 
-   **Sales inquiry:**
-   - Acknowledge their interest and specific question
-   - Provide clear, helpful information (no hard sell in first reply)
-   - Offer a clear next step: "Would you like me to set up a quick call with [founder]?" or "Here's a link to learn more"
-   - Collect relevant context if routing to founder (company, use case, budget indicator)
+4. **Apply brand voice.** DM voice should feel human, not templated. Not overly casual, not stiff.
 
-   **Support / complaint:**
-   - Acknowledge their frustration first (don't jump to solution)
-   - Apologize if appropriate (genuine, not formulaic)
-   - Ask clarifying questions if needed
-   - Provide resolution or next step
-   - Escalate to founder if: technical issue, account problem, refund request, or high-value customer at risk
-
-   **Collaboration / partnership:**
-   - Thank them for reaching out
-   - Ask qualifying questions: what they have in mind, audience size, what they're looking for
-   - Don't commit to anything in the first reply
-   - Route to founder with a summary: who they are, what they want, your assessment of fit
-
-   **Spam / irrelevant:**
-   - Do not engage
-   - Block/report if aggressive or repeated
-   - No response needed
-
-   **Personal / founder connection:**
-   - If clearly someone the founder knows: acknowledge warmly, flag for founder to reply personally
-   - If unclear: ask a gentle qualifying question before routing
-
-4. Apply brand voice to every response:
-   - Sales: informative, not pushy
-   - Support: empathetic, not defensive
-   - Collaboration: professional, not desperate
-   - The DM voice should feel like the founder typing, not a customer service bot
-
-5. Track response status:
-   - Replied: response sent
-   - Escalated: routed to founder with summary
-   - Pending: waiting on information before replying
-   - Ignored: spam or explicitly not worth responding to
+5. **Track status:** Replied / Escalated / Pending / Ignored.
 
 ## Output Format
 
@@ -88,37 +69,40 @@ Triage and draft responses to direct messages across platforms. DMs are high-tru
 
 ## Message 1
 **Platform:** [X / LinkedIn / IG / TikTok]
-**From:** @handle / [Name]
+**From:** @handle
 **Category:** [Sales / Support / Collaboration / Spam / Personal / Press]
 **Priority:** [Critical / High / Medium / Low]
 **Message:** "[Full DM text]"
 
 **Response Draft:**
-[Full response text, formatted for platform]
+[Full response text]
 
-**Action:** [Send / Escalate to founder / Ignore]
-**If escalated — summary for founder:** [Who, what they want, your recommendation]
+**Action:** [Send / Escalate / Ignore]
+**If escalated — founder summary:** [Who, what they want, your recommendation]
 
 ---
 
-## Daily DM Summary
-- Total new: [N]
-- Replied: [N]
-- Escalated to founder: [N]
-- Pending (waiting on info): [N]
-- Ignored (spam): [N]
+## Daily Summary
+- Total new: [N] | Replied: [N] | Escalated: [N] | Pending: [N] | Ignored: [N]
 - Avg response time: [N] hours
 ```
 
+## Done Criteria
+
+The skill is complete when:
+1. All new DMs are categorized
+2. Sales/support/collaboration DMs have response drafts
+3. Spam is identified and marked (no response drafted)
+4. Escalated DMs have a founder summary
+5. Response time priority is met (critical < 1 hour)
+
 ## Pitfalls
 
-- Using the same templated response for every DM (people can tell)
-- Responding to spam or trolls (rewards bad behavior, wastes time)
-- DMing a link without context or relationship (spammy even if well-intentioned)
-- Ignoring support DMs (the fastest way to create a public complainer)
-- Over-promising in DMs ("founder will reach out personally today" unless actually true)
-- Not tracking unresolved DMs (they pile up and become a reputation problem)
+- Templated responses that feel automated
+- Responding to troll or spam DMs
+- Sending a link without context (spammy)
+- Ignoring support DMs (fastest way to create a public complainer)
 
 ## Verification
 
-Read each drafted response. Does it sound human? Would the founder feel good about this being sent in their name? Does the response actually answer their question or address their concern? For escalated DMs, is the founder summary enough for them to reply without reading the full thread?
+Read each draft. Does it sound human? Would the founder feel good about this being sent in their name? For escalated DMs, is the founder summary enough to reply without reading the full thread?

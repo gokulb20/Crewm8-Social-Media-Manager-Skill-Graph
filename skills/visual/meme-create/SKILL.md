@@ -1,75 +1,82 @@
 ---
 name: meme-create
 description: Create platform-relevant meme concepts adapted to the brand voice — with text overlay, format reference, and posting context — for X, Instagram, and TikTok.
-version: 1.0.0
-author: Gokul
+version: 2.0.0
+author: Crewm8
+maintainer: Gokul (github.com/gokulb20)
 license: MIT
-metadata:
-  hermes:
-    tags: [Social, Visual, Memes, Humor, Engagement]
-    related_skills: [brand-voice-system, visual-plan, image-prompt, asset-format]
+homepage: https://crewm8.ai
+tags: [social, visual, memes, humor, engagement, creativity]
+related_skills: [brand-voice-system, visual-plan, image-prompt, asset-format, trend-monitor]
+inputs_required: [meme-opportunity-context, brand-humor-boundaries, target-platform]
+deliverables: [meme-concept-with-text-overlay-and-risk-assessment]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
 ---
 
 # Meme Create
 
 Design branded meme concepts that feel native to the platform and authentic to the brand. Memes are high-risk, high-reward — done right they're the most shared content type; done wrong they signal that a brand is trying too hard.
 
+## Purpose
+
+Memes juice the algorithm in ways polished content can't. They're fast, shareable, and community-building. But forced memes are the fastest way to look out of touch. This skill produces memes that feel natural, not corporate.
+
 ## When to Use
 
-- Trending meme format circulating that's relevant to the niche
-- Low-engagement period (memes can juice the algorithm)
-- Community inside joke has emerged (meme solidifies it)
+- Trending meme format relevant to the niche
+- Low-engagement period (memes can reset algorithmic momentum)
+- Community inside joke has emerged
 - Competitor just posted something too serious (counter with humor)
-- Product or industry pain point that's universally relatable
+- Industry pain point that's universally relatable
+
+## Inputs Required
+
+- Meme opportunity (trending format, inside joke, pain point, competitor moment)
+- Brand humor style (from voice guide: dry, absurd, self-deprecating, playful, none)
+- Risk tolerance (how edgy is the brand willing to be?)
+- Target platform
 
 ## Quick Reference
 
-| Meme Type | Risk Level | Best Platform | Example Context |
-|-----------|-----------|--------------|----------------|
-| Trending format adaptation | Low | X, IG, TikTok | Take a popular template, apply niche context |
-| Industry insider joke | Medium | X, LinkedIn | Only your target audience will get it — that's the point |
-| Self-deprecating / BTS | Low | IG Stories, X | "How it started vs how it's going" with real moments |
+| Meme Type | Risk Level | Best Platform | Example |
+|-----------|-----------|--------------|---------|
+| Trending format adaptation | Low | X, IG, TikTok | Popular template + niche context |
+| Industry insider joke | Medium | X, LinkedIn | Only your audience gets it — that's the point |
+| Self-deprecating / BTS | Low | IG Stories, X | "How it started vs how it's going" |
+| Relatable pain point | Low | All | "Every founder during fundraising" |
 | Competitor jab | High | X | Funny but not mean; don't punch down |
-| Relatable pain point | Low | All | "Every founder during fundraising" type beats |
 
 ## Procedure
 
-1. Identify the meme opportunity:
-   - Is there a trending format right now? (check `trend-monitor` skill output)
-   - Is there a community joke or shared pain point worth meme-ifying?
-   - Is the founder willing to be a little less polished for this one?
+1. **Identify the opportunity.** Is there a trending format (from `trend-monitor`)? An inside joke? A relatable pain point?
 
-2. Choose the meme format:
+2. **Choose the format:**
    - Image macro: existing template + branded text overlay
-   - Video/reaction: short clip with caption/timing
-   - Text-only format: "Nobody: / Me:" style posts work on X without visuals
+   - Video/reaction: short clip with caption
+   - Text-only: "Nobody: / Me:" style (X only, no visual needed)
    - Custom graphic: original visual designed around the joke
 
-3. Write the text overlay / caption:
+3. **Write the text overlay / caption:**
    - Setup line (top): sets up the scenario
    - Punchline (bottom): the relatable/surprising twist
-   - Keep text short — 5-10 words per line maximum
-   - Match the brand's humor style (dry, absurdist, self-deprecating, playful)
+   - 5-10 words per line maximum
+   - Match brand humor style (dry, absurd, self-deprecating, playful)
 
-4. Adapt to each platform:
-   - X: text-first memes work (no visual needed); image macros with overlay
-   - IG: visual-first, story-friendly format preferred
+4. **Adapt to each platform:**
+   - X: text-first memes work; image macros with overlay
+   - IG: visual-first, story-friendly
    - TikTok: video-based, green-screen or reaction format
-   - LinkedIn: much rarer; only if the brand has an established "personality" there. Skip if unsure.
+   - LinkedIn: rare; only if brand personality is established there
 
-5. Run the "cringe test":
-   - Would the founder feel good about this being the top post on their profile?
-   - Is this funny TO the audience, or AT them?
-   - If the meme flops, is it "oh well" or "delete account" level? Avoid the latter.
+5. **Run the cringe test:**
+   - Would the founder feel good about this being their top post?
+   - Is it funny TO the audience, or AT them?
+   - If it flops, is it "oh well" or "delete account"?
 
-6. Specify visual execution:
-   - If using an existing template: name the template so a designer can find it
-   - If creating from scratch: describe the visual + reference any inspiration
+6. **Specify visual execution:**
+   - Template name (if existing) or visual description (if custom)
    - Dimensions per platform (delegate to `asset-format`)
-
-7. Determine timing:
-   - Memes tied to trends: post within 24 hours of trend peak
-   - Evergreen memes: post during historically low-engagement windows as an algorithm bump
+   - Font and text placement
 
 ## Output Format
 
@@ -82,40 +89,53 @@ Design branded meme concepts that feel native to the platform and authentic to t
 **Platform:** [X / IG / TikTok / multi-platform]
 
 ## Concept
-**Setup:** [Text or visual description — what the audience sees first]
-**Punchline / Twist:** [The relatable or surprising reveal]
-**Brand connection:** [Why this fits the brand's voice and niche]
+**Setup:** [What the audience sees first]
+**Punchline:** [The relatable or surprising reveal]
+**Brand connection:** [Why this fits the brand and niche]
 
-## Text Overlay (for visual memes)
-- **Top text:** [Short setup line]
+## Text Overlay
+- **Top text:** [Setup line]
 - **Bottom text:** [Punchline]
 
 ## Caption
-[The text that accompanies the meme post — context, additional joke layer, or CTA]
+[Post text — context, additional joke layer, CTA]
 
-## Format / Template Reference
-- **Template name:** [e.g., "Distracted Boyfriend," "Drake Hotline Bling," custom]
-- **Visual description:** [What the image/video should look like if not using an existing template]
-- **Dimensions:** [Per platform]
+## Format / Template
+**Template name:** [e.g., "Distracted Boyfriend," custom]
+**Dimensions:** [Per platform]
 
 ## Risk Assessment
 **Cringe risk:** [Low / Medium / High]
-**Founder comfort check:** [Would they post this? If unsure, flag for approval.]
-**Backup plan:** [If engagement is bad, what's the next post to recover?]
-
-## Posting Context
-**Best window:** [Trending window or low-engagement bump slot]
-**Cross-platform:** [Adaptation notes if posting to multiple platforms]
+**Founder comfort check:** [Would they post this?]
 ```
+
+## Done Criteria
+
+The skill is complete when:
+1. Meme concept has a clear setup + punchline
+2. Brand connection is authentic (not forced)
+3. Risk assessment is documented
+4. Text overlay and caption are written
+5. Format and dimensions are specified per platform
 
 ## Pitfalls
 
-- Forcing humor when the brand voice isn't naturally funny (serious brands doing memes = cringe)
-- Using a template that peaked 2 weeks ago (late to the party is worse than not showing up)
-- Memes that require too much niche knowledge (if 90% of followers don't get it, it's a wasted post)
-- Inside jokes that feel exclusionary rather than community-building
-- Not checking with the founder before posting an edgy meme (surprise cringe is worse than approved cringe)
+- Forcing humor when the brand voice isn't naturally funny
+- Using a template that peaked 2+ weeks ago (late is worse than absent)
+- Memes requiring too much niche knowledge to be funny
+- Not checking with the founder before posting edgy content
 
 ## Verification
 
-The cringe test (see step 5 above). Also: show the meme concept to one person outside the company who fits the target audience. Do they laugh or do they say "I don't get it"? If the latter, scrap it or simplify.
+The cringe test (step 5). Also: show the concept to one person outside the company who fits the target audience. Do they laugh or say "I don't get it"?
+
+## Example
+
+*Input:* SaaS analytics brand. Trending format: "Wait, it's all [X]?" + "Always has been." Pain point: founders obsessed with vanity metrics.
+
+*Output:*
+- Top text: "Wait, it's all DAU?"
+- Bottom text: "Always has been." (subtitle: "meanwhile, your retention is 12%")
+- Caption: "The hardest truth in analytics: the metric you're optimizing probably isn't the one that matters. Save this for your next board meeting when someone asks about DAU."
+- Cringe risk: Low (relatable, punches up, doesn't make fun of the audience)
+- Platform: X (text meme, no visual needed)

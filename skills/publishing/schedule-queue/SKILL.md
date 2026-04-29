@@ -1,26 +1,42 @@
 ---
 name: schedule-queue
-description: Queue posts to scheduling tools (Buffer, Hypefury, native schedulers) with platform-specific formatting, optimized posting times, media attachments, and cross-platform coordination.
-version: 1.0.0
-author: Gokul
+description: Queue approved posts to scheduling tools (Buffer, Hypefury, Typefully, native schedulers) with platform-specific formatting, optimized posting times, media attachments, and cross-platform coordination.
+version: 2.0.0
+author: Crewm8
+maintainer: Gokul (github.com/gokulb20)
 license: MIT
-metadata:
-  hermes:
-    tags: [Social, Publishing, Scheduling, Queue, Automation]
-    related_skills: [content-calendar, cadence-timing, cross-post-adapt, draft-review, thread-structure]
+homepage: https://crewm8.ai
+tags: [social, publishing, scheduling, queue, automation, workflow]
+related_skills: [content-calendar, cadence-timing, cross-post-adapt, draft-review, thread-structure]
+inputs_required: [approved-posts-per-platform, posting-times, media-assets, scheduling-tool]
+deliverables: [publishing-queue-ready-to-schedule]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
 ---
 
 # Schedule Queue
 
-Take approved content and queue it to the right scheduling tool for the right platform at the right time. This skill bridges the gap between "content is written" and "content is live." It handles formatting, media attachment, timing optimization, and queue management.
+Take approved content and queue it to the right scheduling tool for the right platform at the right time. This skill bridges "content is written" and "content is live."
+
+## Purpose
+
+The gap between content creation and publishing is where most social strategies die. This skill eliminates that gap by handling formatting, media attachment, timing optimization, and queue management — so all that's left is clicking "schedule all."
 
 ## When to Use
 
-- Weekly batch scheduling session (queue the whole week at once)
-- Posts have been drafted and approved (passed `draft-review`)
-- Content calendar is locked for the week
-- Founder approved the queue and says "schedule it"
-- Rebalancing a queue mid-week (move posts due to trending content)
+- Weekly batch scheduling session
+- Posts drafted and approved (passed `draft-review`)
+- Content calendar is locked
+- Founder approved the queue
+- Rebalancing a queue mid-week
+
+## Inputs Required
+
+- Approved posts per platform (text, formatted)
+- Target posting times per platform (from `cadence-timing`)
+- Media assets per post (images, videos, GIFs)
+- Scheduling tool (Buffer, Hypefury, Typefully, native — or any equivalent)
+- Auto-plug rules for threads
+- Bio link update schedule
 
 ## Quick Reference
 
@@ -34,42 +50,37 @@ Take approved content and queue it to the right scheduling tool for the right pl
 
 ## Procedure
 
-1. Gather all approved posts for the scheduling window:
-   - Post text per platform (from `post-create`, `thread-create`, `caption-draft`)
-   - Target platforms per post
-   - Recommended posting times from `cadence-timing` skill
-   - Media assets (images, videos, GIFs) — confirm they're formatted per `asset-format`
-   - Any special rules (thread structure from `thread-structure`, auto-plug settings, link placement)
+1. **Gather all approved posts** for the scheduling window:
+   - Post text per platform
+   - Target platforms
+   - Recommended posting times
+   - Media assets (formatted per `asset-format`)
+   - Special rules (thread structure, auto-plug settings)
 
-2. Assign each post to a specific time slot:
-   - Match to best-practice times from `cadence-timing`
-   - Check for collisions (two posts from same brand within 30 minutes on same platform — too close)
-   - Ensure thread tweets are scheduled with correct spacing (1-2 minutes between tweets)
-   - Leave buffer slots for reactive/trending content
+2. **Assign each post to a time slot:**
+   - Match `cadence-timing` best times
+   - Check for collisions (two posts same platform within 30 min — too close)
+   - Space thread tweets 1-2 minutes apart
 
-3. Format content per platform before queuing:
-   - X: character count (280), line breaks, no links in first tweet
-   - LinkedIn: character-friendly formatting, 3-5 hashtags at end
-   - IG: caption with first 2 lines optimized, hashtags in first comment or end
-   - TikTok: caption short, no links, hashtags optimized for discovery
+3. **Format content per platform before queuing:**
+   - X: character count verified, links only in final tweet or reply
+   - LinkedIn: 3-5 hashtags at end
+   - IG: first 2 lines optimized, hashtags in first comment or end of caption
+   - TikTok: caption short, no links
 
-4. Attach media assets:
-   - Confirm correct dimensions per platform (see `asset-format`)
-   - Write alt-text for images (accessibility + SEO)
-   - Set thumbnail for videos if custom needed
-   - Verify video captions/subtitles are embedded or attached
+4. **Attach media assets:**
+   - Confirm correct dimensions
+   - Write alt-text for accessibility
+   - Set thumbnail for video if custom needed
+   - Verify captions/subtitles embedded
 
-5. Set auto-plug rules for applicable posts:
-   - Threads: add link to first tweet after [X likes or Y minutes] threshold
-   - Link-in-bio posts: ensure bio link is updated BEFORE the post goes live
-   - Follow-up posts: schedule secondary posts that reference the main post (2 hours after)
+5. **Set auto-plug rules:**
+   - Threads: add link to tweet 1 after [X likes or Y minutes]
+   - Link-in-bio posts: ensure bio link is updated BEFORE post goes live
 
-6. Apply queue management rules:
-   - Set queue to "stop at X posts" if the week is unusually heavy (avoid audience fatigue)
-   - Enable "best time" slots where the scheduler picks the optimal time within a window
-   - Set fallback times if a slot is empty (don't post nothing)
-
-7. Provide the queue summary for a final review before hitting "schedule all."
+6. **Set queue management:**
+   - Maximum posts per day per platform to avoid fatigue
+   - Fallback times if a slot is empty
 
 ## Output Format
 
@@ -77,52 +88,46 @@ Take approved content and queue it to the right scheduling tool for the right pl
 # Publishing Queue: [Week of Date]
 
 ## Queue Summary
-- **Total posts:** [N] across all platforms
-- **Scheduling tool:** [Buffer / Hypefury / etc.]
-- **Scheduling window:** [Date range]
-- **Flex slots reserved:** [N] for reactive content
+- **Total posts:** [N] across platforms
+- **Scheduling tool:** [Tool name]
+- **Window:** [Date range]
+- **Flex slots reserved:** [N]
 
 ## Queue by Platform
 
 ### X
 | Time | Content | Type | Media | Auto-plug | Status |
 |------|---------|------|-------|-----------|--------|
-| Mon 9:00 AM | [Hook text truncated] | Thread (8 tweets) | Image tweet 3 | Link after 20 likes | Queued |
-| Mon 1:00 PM | [Hook text truncated] | Short post | None | None | Queued |
+| Mon 9:00 AM | [Hook truncated] | Thread (8 tweets) | Image tweet 3 | Link after 20 likes | Queued |
 ...
 
-### LinkedIn
-| Time | Content | Type | Media | Notes | Status |
-|------|---------|------|-------|-------|--------|
-...
-
-### Instagram
-...
-
-### TikTok
-...
+### LinkedIn / Instagram / TikTok
+[Same structure per platform]
 
 ## Collision Check
-[Any posts within 30 min of each other on same platform? Any thread spacing violations?]
+[Any posts within 30 min of each other?]
 
 ## Bio Link Coordination
-[Posts that require bio link to match — which link, when to update]
-
-## Post-Schedule Actions
-- [ ] Update bio link for [platform] at [time]
-- [ ] Monitor auto-plug for [thread] — manually trigger if threshold not met in 2 hours
-- [ ] Reply to first comment on each post within 30 minutes (algorithm boost)
+[Posts that require bio link updates — when to update]
 ```
+
+## Done Criteria
+
+The skill is complete when:
+1. Every approved post has a time slot
+2. No platform collisions exist
+3. All media is attached and correctly formatted
+4. Auto-plug rules are configured
+5. Bio link coordination is documented
+6. Queue is ready for the "schedule all" action
 
 ## Pitfalls
 
-- Scheduling threads with zero spacing (all tweets hit at once — looks broken)
-- Forgetting to check media dimensions before scheduling (rejected by platform, queue stalls)
-- Scheduling a post that links to a URL that isn't live yet
-- Queue collision: two brands or handles posting on the same platform at nearly the same time
-- Not updating bio link before a "link in bio" post goes live (dead link = lost traffic)
-- Over-scheduling: 4 X posts in 3 hours (algorithm punishes, audience annoyed)
+- Scheduling threads with zero spacing (unfolds as one block)
+- Forgetting to check media dimensions (queue stalls when platform rejects it)
+- Scheduling a post linking to a URL that isn't live yet
+- Not updating bio link before "link in bio" post goes live
 
 ## Verification
 
-Preview the queue in the scheduling tool (most have a calendar view). Does the week look balanced? Are there obvious gaps? Does every post have media attached if needed? Export the queue as a shareable calendar view for founder sign-off.
+Preview the queue in the scheduling tool's calendar view. Does the week look balanced? Does every post have media if needed? Does every thread have correct tweet spacing?

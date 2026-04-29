@@ -1,71 +1,77 @@
 ---
 name: mention-monitor
 description: Monitor brand mentions across all platforms, reply within 2-4 hours, categorize by sentiment and priority, and log unanswered mentions for follow-up.
-version: 1.0.0
-author: Gokul
+version: 2.0.0
+author: Crewm8
+maintainer: Gokul (github.com/gokulb20)
 license: MIT
-metadata:
-  hermes:
-    tags: [Social, Engagement, Mentions, Monitoring, Brand-Awareness]
-    related_skills: [comment-reply, dm-respond, crisis-respond]
+homepage: https://crewm8.ai
+tags: [social, engagement, mentions, monitoring, brand-awareness, sentiment]
+related_skills: [comment-reply, dm-respond, crisis-respond, performance-report]
+inputs_required: [brand-handles-and-keywords-to-monitor, platform-access-per-platform]
+deliverables: [mention-report-with-reply-status-and-sentiment]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
 ---
 
 # Mention Monitor
 
-Track every time the brand is mentioned across platforms and ensure nothing goes unanswered. Mentions are social proof in public — a thanked mention builds community; an ignored mention signals that the brand doesn't care.
+Track every time the brand is mentioned across platforms and ensure nothing goes unanswered. A thanked mention builds community. An ignored mention signals the brand doesn't care.
+
+## Purpose
+
+Brand mentions are free attention. Ignoring them is leaving social capital on the table. This skill ensures every mention is seen, categorized, and responded to within the appropriate timeframe.
 
 ## When to Use
 
-- Daily monitoring routine (check mentions across all platforms)
+- Daily monitoring routine
 - After a high-performing post goes out (mention volume spikes)
-- Post-launch or campaign period (elevated mention activity)
-- Founder says "I keep seeing people talk about us and nobody is responding"
-- Weekly mention audit — which mentions were missed?
+- Post-launch or campaign period
+- Weekly mention audit
+
+## Inputs Required
+
+- Brand handle(s) and keywords to monitor
+- Access to each platform's notification/mention feed
+- Response time targets
 
 ## Quick Reference
 
 | Mention Type | Priority | Response Time | Action |
 |-------------|---------|--------------|--------|
-| Direct tag/shoutout | High | Within 2 hours | Thank + add value (reply or quote tweet) |
-| Question about product | Critical | Within 1 hour | Answer directly; escalate if technical |
-| Complaint / negative | Critical | Within 1 hour | Acknowledge, route to `crisis-respond` if needed |
-| Share/repost of content | Medium | Within 4 hours | Thank them individually |
-| Casual reference (untagged) | Low | Within 24 hours | Engage if natural; don't force it |
+| Direct tag/shoutout | High | Within 2 hours | Thank + add value |
+| Question about product | Critical | Within 1 hour | Answer directly |
+| Complaint / negative | Critical | Within 1 hour | Acknowledge, route if needed |
+| Share / repost | Medium | Within 4 hours | Thank individually |
+| Casual reference (untagged) | Low | Within 24 hours | Engage if natural |
 | Competitor comparison | Medium | Within 4 hours | Monitor; engage only if factual correction needed |
 
 ## Procedure
 
-1. Set up mention detection:
-   - X: monitor @handle tags + brand name keyword searches
+1. **Set up mention detection:**
+   - X: @handle tags + brand name keyword searches
    - LinkedIn: @company mentions + post tags
-   - Instagram: @handle tags in captions, comments, and stories
+   - Instagram: @handle tags in captions, comments, stories
    - TikTok: @handle tags + brand name in video text/captions
 
-2. Conduct a daily sweep (morning + afternoon minimum):
-   - Check all direct @mention mentions first
+2. **Daily sweep** (morning + afternoon):
+   - Check all direct @mentions
    - Search for untagged brand name references
-   - Check quote tweets of recent brand posts
-   - Review any story mentions (IG/TikTok)
+   - Check quote tweets
+   - Review story mentions (IG/TikTok)
 
-3. Categorize each mention using the Quick Reference table.
+3. **Categorize each mention** using the Quick Reference table.
 
-4. Draft responses:
-   - Shoutout: "Appreciate you sharing this [name/context]" + add a follow-up thought
+4. **Draft responses:**
+   - Shoutout: "Appreciate you sharing this [name/context]" + follow-up thought
    - Question: answer thoroughly, link to resource if available
    - Complaint: acknowledge, express willingness to help, route to appropriate channel
    - Share: "Thanks for spreading the word" + reference something specific about their share
 
-5. Track mention metrics:
+5. **Track mention metrics:**
    - Total mentions per day
    - Positive/neutral/negative ratio
-   - Response rate (replied within target time)
-   - Unanswered mentions (and why — was it intentional?)
-
-6. Weekly mention report:
-   - Volume trend (going up or down?)
-   - Top mentioners (who's consistently talking about the brand?)
-   - Missed opportunities: mentions that should have been replied to but slipped through
-   - Sentiment shift: any change in the tone of mentions this week?
+   - Response rate (within target time)
+   - Unanswered mentions
 
 ## Output Format
 
@@ -75,30 +81,36 @@ Track every time the brand is mentioned across platforms and ensure nothing goes
 ## Mentions Today
 | Time | Platform | User | Type | Content (truncated) | Priority | Response | Status |
 |------|----------|------|------|--------------------|----------|----------|--------|
-| 9:15 | X | @user | Shoutout | "[Mention text]" | High | "[Drafted reply]" | Replied |
-| 10:30 | LinkedIn | Name | Question | "[Mention text]" | Critical | "[Drafted reply]" | Replied |
-| 2:00 | IG | @user | Share | "[Mention text]" | Medium | "[Drafted reply]" | Pending |
+| 9:15 | X | @user | Shoutout | "[text]" | High | "[reply]" | Replied |
 ...
 
 ## Unanswered (Flagged)
-[Any mentions that couldn't be resolved — why? Next step?]
+[Any that couldn't be resolved — why?]
 
 ## Weekly Summary
-- **Total mentions:** [N]
-- **Response rate:** [N]%
-- **Avg response time:** [N] hours
-- **Sentiment breakdown:** Positive [N]% / Neutral [N]% / Negative [N]%
-- **Top mentioners:** @handle1, @handle2, ...
+- Total mentions: [N] | Response rate: [N]%
+- Avg response time: [N] hours
+- Sentiment: Positive [N]% / Neutral [N]% / Negative [N]%
+- Top mentioners: @handle1, @handle2...
 ```
+
+## Done Criteria
+
+The skill is complete when:
+1. All direct @mentions are categorized and replied to
+2. Untagged references are noted (engagement decision made)
+3. High-priority mentions responded within target time
+4. Unanswered mentions flagged with reason
+5. Weekly summary compiled (if end of week)
 
 ## Pitfalls
 
-- Only monitoring @tags and missing untagged brand references (biggest blind spot)
-- Generic "thanks!" replies to every mention (looks automated after the third one)
-- Engaging with competitors' negative comparisons (escalating a flame war)
-- Not noticing a complaint mention until it's gone viral (2 hour windows matter)
-- Responding to a mention from 3 days ago (looks like you're catching up, not listening)
+- Only monitoring @tags and missing untagged references
+- Generic "thanks!" replies to every mention
+- Engaging with competitor negative comparisons
+- Not noticing a complaint until it's viral
+- Responding to a 3-day-old mention (looks like catching up)
 
 ## Verification
 
-Check: are there any mentions from the last 24 hours that went unanswered? Is there a mention that received a reply but the reply was templated/generic? Is the response rate above 90% for high-priority mentions? If not, adjust the monitoring frequency or response templates.
+Are there mentions from the last 24 hours that went unanswered? Is the response rate above 90% for high-priority? If not, adjust monitoring frequency or templates.
