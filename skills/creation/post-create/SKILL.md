@@ -10,7 +10,7 @@ tags: [social, creation, posts, platform-native, writing, content]
 related_skills: [hook-write, cta-craft, brand-voice-system, caption-draft, cross-post-adapt]
 inputs_required: [topic-or-angle, brand-voice-guide, target-platform, desired-cta-type]
 deliverables: [platform-formatted-post-text]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Post Create

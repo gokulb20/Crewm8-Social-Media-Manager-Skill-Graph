@@ -10,7 +10,7 @@ tags: [social, planning, cadence, timing, platform-strategy, optimization]
 related_skills: [content-calendar, schedule-queue, metrics-track, performance-report]
 inputs_required: [audience-geography-data-if-available, platform-analytics-export, past-post-performance-data]
 deliverables: [cadence-and-timing-guide]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Cadence & Timing

@@ -10,7 +10,7 @@ tags: [social, analytics, ab-testing, experimentation, optimization, data-driven
 related_skills: [metrics-track, hook-write, cta-craft, performance-report]
 inputs_required: [test-hypothesis, test-results-data, control-and-variant-descriptions]
 deliverables: [ab-test-analysis-with-winner-declaration]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # A/B Test Analyze

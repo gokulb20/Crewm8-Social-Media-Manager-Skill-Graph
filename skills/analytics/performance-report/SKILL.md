@@ -10,7 +10,7 @@ tags: [social, analytics, reporting, performance, insights, executive]
 related_skills: [metrics-track, ab-test-analyze, content-calendar, trending-briefing]
 inputs_required: [metrics-data-for-period, ab-test-results-if-any, content-calendar-for-reference]
 deliverables: [weekly-monthly-performance-report]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Performance Report

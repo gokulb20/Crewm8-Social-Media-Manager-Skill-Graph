@@ -10,7 +10,7 @@ tags: [social, publishing, scheduling, queue, automation, workflow]
 related_skills: [content-calendar, cadence-timing, cross-post-adapt, draft-review, thread-structure]
 inputs_required: [approved-posts-per-platform, posting-times, media-assets, scheduling-tool]
 deliverables: [publishing-queue-ready-to-schedule]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Schedule Queue

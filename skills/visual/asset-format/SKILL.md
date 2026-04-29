@@ -10,7 +10,7 @@ tags: [social, visual, formatting, dimensions, platform-specs, technical]
 related_skills: [visual-plan, image-prompt, meme-create]
 inputs_required: [target-platform, content-type, source-asset-info-if-resizing]
 deliverables: [asset-format-spec-with-dimensions-and-safe-zones]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Asset Format

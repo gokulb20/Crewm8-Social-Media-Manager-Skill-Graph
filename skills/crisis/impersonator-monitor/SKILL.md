@@ -10,7 +10,7 @@ tags: [social, crisis, impersonation, security, brand-protection, safety]
 related_skills: [crisis-respond, mention-monitor, apology-draft]
 inputs_required: [brand-handles, platforms-to-monitor]
 deliverables: [impersonation-detection-report-and-escalation-plan]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 requires_capabilities: [web-search]
 ---
 

@@ -10,7 +10,7 @@ tags: [social, strategy, positioning, messaging, brand-foundation]
 related_skills: [brand-voice-system, content-pillars, hook-write]
 inputs_required: [existing-brand-materials, customer-interviews-or-testimonials, competitor-landscape]
 deliverables: [positioning-statement-document]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Positioning Statement

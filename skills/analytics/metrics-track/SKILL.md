@@ -10,7 +10,7 @@ tags: [social, analytics, metrics, tracking, data, reporting]
 related_skills: [ab-test-analyze, performance-report, cadence-timing]
 inputs_required: [platform-analytics-access, post-list-for-tracking-period]
 deliverables: [metrics-snapshot-with-anomaly-flags]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Metrics Track

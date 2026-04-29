@@ -10,7 +10,7 @@ tags: [social, publishing, review, approval, workflow, founder]
 related_skills: [schedule-queue, brand-voice-system, content-calendar]
 inputs_required: [content-drafts-for-review-window, review-cadence, founder-availability]
 deliverables: [draft-review-queue-with-status-tracking]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Draft Review

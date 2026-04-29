@@ -10,7 +10,7 @@ tags: [social, captions, instagram, linkedin, writing, hashtags]
 related_skills: [hook-write, cta-craft, post-create, visual-plan]
 inputs_required: [visual-asset-description, core-message, target-platform, cta-requirement]
 deliverables: [platform-formatted-caption-with-hashtags]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Caption Draft

@@ -10,7 +10,7 @@ tags: [social, strategy, brand-voice, tone, consistency, identity]
 related_skills: [positioning-statement, content-pillars]
 inputs_required: [social-post-samples, founder-interviews-or-voice-references, existing-brand-guidelines-if-any]
 deliverables: [brand-voice-guide-document]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Brand Voice System

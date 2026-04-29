@@ -2,7 +2,7 @@
 
 **A complete social media operator's playbook — 37 skills, 12 functions, any agent.**
 
-> Built by [Crewm8](https://crewm8.ai) — a free, open-source skill graph for the agent ecosystem. Works with Hermes Agent, Claude Code, Factory Droid, Cursor, Windsurf, OpenAI agents, and any markdown-skill-aware agent.
+> Built by [Crewm8](https://crewm8.ai) — a free, open-source skill graph for the agent ecosystem. Works with Hermes Agent, Claude Code, Factory Droid, Cursor, Windsurf, OpenClaw, OpenAI agents, and any markdown-skill-aware agent.
 
 ---
 
@@ -135,6 +135,9 @@ cp -r ~/.crew-skills/skills/* ~/.factory/skills/      # personal-level
 ln -s ~/.crew-skills/skills /path/to/project/.cursor/skills/
 # Reference in .cursorrules: "You have social media skills at ~/.crew-skills/skills/"
 ```
+
+### OpenClaw Agent
+Clone the repository and point OpenClaw at the `skills/` directory. Each SKILL.md uses the universal format (`name`, `description`, `tags`) that OpenClaw natively recognizes for skill discovery.
 
 ### OpenAI agents / Custom GPTs
 Upload individual SKILL.md files as knowledge base documents. No special configuration needed.
@@ -280,7 +283,7 @@ tags: [social, category, keywords]
 related_skills: [other-skill-names]
 inputs_required: [what-the-agent-needs-before-starting]
 deliverables: [what-the-skill-produces]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 requires_capabilities: [text-generation]  # optional
 ---
 ```

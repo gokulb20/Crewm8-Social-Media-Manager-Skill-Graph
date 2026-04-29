@@ -10,7 +10,7 @@ tags: [social, engagement, polls, audience-research, interactive, community]
 related_skills: [post-create, caption-draft, metrics-track, cta-craft]
 inputs_required: [poll-purpose, target-platform, audience-insight-goal]
 deliverables: [poll-design-with-follow-up-plan]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Engagement Poll

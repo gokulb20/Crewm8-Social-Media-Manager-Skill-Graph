@@ -10,7 +10,7 @@ tags: [social, engagement, dms, customer-service, triage, founder]
 related_skills: [comment-reply, mention-monitor, crisis-respond]
 inputs_required: [inbound-dms-across-platforms, existing-response-templates-if-any]
 deliverables: [dm-responses-per-category-with-escalation-decisions]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # DM Respond

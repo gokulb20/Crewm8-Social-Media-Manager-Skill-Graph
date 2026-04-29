@@ -10,7 +10,7 @@ tags: [social, publishing, cross-posting, platform-adaptation, multi-platform]
 related_skills: [post-create, thread-create, caption-draft, schedule-queue, brand-voice-system]
 inputs_required: [source-content, source-platform, target-platforms, core-message]
 deliverables: [platform-native-adaptations-for-each-target]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Cross-Post Adapt

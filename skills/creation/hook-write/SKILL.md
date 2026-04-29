@@ -10,7 +10,7 @@ tags: [social, creation, hooks, attention, writing, optimization]
 related_skills: [post-create, thread-create, caption-draft, cta-craft, ab-test-analyze]
 inputs_required: [core-idea-or-topic, target-platform, target-audience-pain-point]
 deliverables: [hook-variations-with-scores-and-recommendations]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Hook Write

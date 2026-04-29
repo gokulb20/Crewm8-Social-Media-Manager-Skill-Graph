@@ -10,7 +10,7 @@ tags: [social, trends, briefing, reporting, founder-update, executive-summary]
 related_skills: [trend-monitor, news-response, performance-report, content-calendar]
 inputs_required: [trend-monitor-outputs, news-response-outputs, competitor-activity, audience-conversations]
 deliverables: [founder-facing-briefing-daily-or-weekly]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Trending Briefing

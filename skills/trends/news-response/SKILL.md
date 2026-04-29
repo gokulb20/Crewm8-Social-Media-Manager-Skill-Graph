@@ -10,7 +10,7 @@ tags: [social, trends, news, quick-response, commentary, thought-leadership]
 related_skills: [trend-monitor, post-create, brand-voice-system, trending-briefing]
 inputs_required: [news-item-url-or-summary, brand-positioning, perspective-or-take]
 deliverables: [news-response-draft-ready-to-post]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 requires_capabilities: [web-search, web-extract]
 ---
 

@@ -10,7 +10,7 @@ tags: [social, creation, threads, x, long-form, writing]
 related_skills: [hook-write, cta-craft, post-create, blog-to-thread, thread-structure]
 inputs_required: [thread-topic-or-source-material, brand-voice-guide, target-cta]
 deliverables: [full-thread-draft-with-auto-plug-config]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Thread Create

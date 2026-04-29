@@ -23,7 +23,7 @@ tags: [social, category, keywords]
 related_skills: [other-skill-names]
 inputs_required: [what-the-agent-needs-before-starting]
 deliverables: [what-the-skill-produces]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 ```
 

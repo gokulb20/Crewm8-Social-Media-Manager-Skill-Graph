@@ -10,7 +10,7 @@ tags: [social, engagement, comments, replies, community, daily-routine]
 related_skills: [brand-voice-system, mention-monitor, dm-respond, crisis-respond]
 inputs_required: [new-comments-on-brand-posts, target-accounts-for-outbound-engagement]
 deliverables: [reply-drafts-for-inbound-and-outbound-engagement]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Comment Reply

@@ -10,7 +10,7 @@ tags: [social, visual, memes, humor, engagement, creativity]
 related_skills: [brand-voice-system, visual-plan, image-prompt, asset-format, trend-monitor]
 inputs_required: [meme-opportunity-context, brand-humor-boundaries, target-platform]
 deliverables: [meme-concept-with-text-overlay-and-risk-assessment]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Meme Create

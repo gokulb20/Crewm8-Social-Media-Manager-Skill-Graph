@@ -10,7 +10,7 @@ tags: [social, profile, audit, consistency, branding, presence]
 related_skills: [presence-refresh, brand-voice-system, positioning-statement]
 inputs_required: [profile-urls-per-platform, brand-guidelines-if-available]
 deliverables: [profile-audit-with-consistency-score-and-remediation-plan]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Profile Audit

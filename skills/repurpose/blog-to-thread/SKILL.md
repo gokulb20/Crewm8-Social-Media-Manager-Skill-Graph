@@ -10,7 +10,7 @@ tags: [social, repurpose, blog, thread, x, long-form]
 related_skills: [thread-create, hook-write, cta-craft, newsletter-to-posts]
 inputs_required: [blog-post-url-or-full-text, target-cta]
 deliverables: [thread-draft-with-traffic-strategy]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Blog to Thread

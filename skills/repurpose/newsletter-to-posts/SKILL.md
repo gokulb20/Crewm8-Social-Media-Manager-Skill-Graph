@@ -10,7 +10,7 @@ tags: [social, repurpose, newsletter, multi-platform, content-bank]
 related_skills: [post-create, thread-create, blog-to-thread, caption-draft]
 inputs_required: [newsletter-full-text, newsletter-subscribe-link, brand-voice-guide]
 deliverables: [multi-post-package-with-posting-sequence]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Newsletter to Posts

@@ -10,7 +10,7 @@ tags: [social, visual, carousels, banners, design-planning, creative]
 related_skills: [image-prompt, asset-format, meme-create, caption-draft, post-create]
 inputs_required: [content-message, brand-visual-guidelines, target-platform, asset-type]
 deliverables: [visual-brief-with-slide-by-slide-copy-and-dimensions]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Visual Plan

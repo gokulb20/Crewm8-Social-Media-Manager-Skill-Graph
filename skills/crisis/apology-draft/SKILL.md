@@ -10,7 +10,7 @@ tags: [social, crisis, apology, reputation, tone, trust]
 related_skills: [crisis-respond, brand-voice-system, draft-review]
 inputs_required: [situation-summary, severity-assessment, founder-availability]
 deliverables: [apology-draft-with-language-audit-and-review-gate]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Apology Draft

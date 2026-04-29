@@ -10,7 +10,7 @@ tags: [social, creation, cta, conversion, writing, persuasion]
 related_skills: [post-create, thread-create, caption-draft, ab-test-analyze, hook-write]
 inputs_required: [post-goal, content-value-level, target-platform, desired-action-type]
 deliverables: [cta-text-with-placement-and-rationale]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # CTA Craft

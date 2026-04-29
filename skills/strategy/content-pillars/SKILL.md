@@ -10,7 +10,7 @@ tags: [social, strategy, content-pillars, taxonomy, planning, repetition]
 related_skills: [positioning-statement, brand-voice-system, content-calendar, hook-write]
 inputs_required: [positioning-statement, audience-research-or-customer-insights]
 deliverables: [content-pillar-document-with-topic-bank]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Content Pillars

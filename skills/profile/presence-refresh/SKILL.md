@@ -10,7 +10,7 @@ tags: [social, profile, optimization, bio, link-in-bio, presence]
 related_skills: [profile-audit, brand-voice-system, positioning-statement, cta-craft]
 inputs_required: [current-profile-state, high-performing-posts, campaign-schedule]
 deliverables: [presence-refresh-plan-with-timeline]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Presence Refresh

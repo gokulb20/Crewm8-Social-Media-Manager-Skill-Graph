@@ -10,7 +10,7 @@ tags: [social, trends, monitoring, viral, hashtags, intelligence]
 related_skills: [trending-briefing, news-response, post-create, meme-create, content-calendar]
 inputs_required: [brand-niche, list-of-key-accounts-to-monitor, platform-access]
 deliverables: [trend-report-with-act-now-recommendations]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 requires_capabilities: [web-search, web-extract]
 ---
 

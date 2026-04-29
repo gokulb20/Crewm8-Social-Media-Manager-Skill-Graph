@@ -10,7 +10,7 @@ tags: [social, crisis, reputation, response, escalation, brand-protection]
 related_skills: [mention-monitor, dm-respond, apology-draft, impersonator-monitor]
 inputs_required: [situation-details, sentiment-assessment, escalation-contacts]
 deliverables: [crisis-response-plan-with-drafted-responses]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Crisis Respond

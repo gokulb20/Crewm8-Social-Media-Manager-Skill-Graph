@@ -10,7 +10,7 @@ tags: [social, repurpose, podcast, clips, multi-platform, content-bank]
 related_skills: [post-create, caption-draft, visual-plan, newsletter-to-posts]
 inputs_required: [podcast-or-interview-transcript, full-episode-url, guest-handle-or-bio]
 deliverables: [clip-inventory-with-posting-schedule]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Podcast to Clips

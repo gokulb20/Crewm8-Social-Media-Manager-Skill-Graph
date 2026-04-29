@@ -10,7 +10,7 @@ tags: [social, publishing, threads, structure, auto-plug, x]
 related_skills: [thread-create, schedule-queue, cta-craft]
 inputs_required: [full-thread-draft, link-for-auto-plug, scheduling-tool]
 deliverables: [thread-spec-with-tweet-sequence-and-auto-plug-config]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Thread Structure

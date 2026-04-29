@@ -10,7 +10,7 @@ tags: [social, planning, content-calendar, scheduling, strategy, workflow]
 related_skills: [content-pillars, cadence-timing, post-create, thread-create, schedule-queue, trend-monitor]
 inputs_required: [content-pillar-document, cadence-rules, brand-calendar-key-dates, any-upcoming-announcements]
 deliverables: [weekly-monthly-content-calendar]
-compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, generic]
+compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
 ---
 
 # Content Calendar
