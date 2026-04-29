@@ -1,33 +1,40 @@
-# Hermes Social Manager Skill Pack
+# Crewm8 Social Media Manager Skill Pack
 
-A comprehensive, granular skill pack for Hermes Agent covering all 12 functions of startup social media management. 37 discrete SKILL.md files organized by category with cross-references, platform-specific formatting rules, and chained workflow support.
+**A comprehensive, granular skill pack for Hermes Agent covering all 12 functions of startup social media management.** 37 discrete SKILL.md files organized by category with cross-references, platform-specific formatting rules, and chained workflow support.
+
+> Built by [Crewm8](https://crewm8.ai) — a skill pack freely available for all Hermes Agents.
+
+---
+
+## About
+
+This skill pack is offered by **Crewm8** ([crewm8.ai](https://crewm8.ai)) as a free, open-source resource for the Hermes Agent ecosystem. It provides a complete social media management capability — from brand strategy and content creation through publishing, engagement, analytics, and crisis management — across X, LinkedIn, Instagram, and TikTok.
+
+- **Repository:** [github.com/gokulb20/Crewm8-Social-Media-Manager-Skill-Graph](https://github.com/gokulb20/Crewm8-Social-Media-Manager-Skill-Graph)
+- **Built by:** [Crewm8](https://crewm8.ai)
+- **License:** MIT
+
+---
 
 ## Installation
 
-### Option 1: Install from a Git repository (recommended)
+### Option 1: Install via Hermes tap (recommended)
 
-1. Push this folder to a GitHub repository:
-   ```bash
-   cd ~/Desktop/hermes-social-skills
-   git init && git add . && git commit -m "Initial social manager skill pack"
-   git remote add origin https://github.com/YOUR_USERNAME/hermes-social-skills.git
-   git push -u origin main
-   ```
+```bash
+hermes skills tap add gokulb20/Crewm8-Social-Media-Manager-Skill-Graph
+```
 
-2. Add the repository as a Hermes tap:
-   ```bash
-   hermes skills tap add YOUR_USERNAME/hermes-social-skills
-   ```
+Then install individual skills as needed:
 
-3. Install individual skills as needed:
-   ```bash
-   hermes skills install YOUR_USERNAME/hermes-social-skills/skills/strategy/brand-voice-system
-   ```
+```bash
+hermes skills install gokulb20/Crewm8-Social-Media-Manager-Skill-Graph/skills/strategy/brand-voice-system
+```
 
 ### Option 2: Copy directly to Hermes skills directory
 
 ```bash
-cp -r ~/Desktop/hermes-social-skills/skills/* ~/.hermes/skills/
+git clone https://github.com/gokulb20/Crewm8-Social-Media-Manager-Skill-Graph.git
+cp -r Crewm8-Social-Media-Manager-Skill-Graph/skills/* ~/.hermes/skills/
 ```
 
 ## Skill Index
@@ -234,6 +241,13 @@ See [Hermes Agent Skill Creation Guide](https://hermes-agent.nousresearch.com/do
 
 ---
 
+## Contributors
+
+- **Gokul** — [github.com/gokulb20](https://github.com/gokulb20)
+- Built with [Factory Droid](https://factory.ai)
+
+---
+
 ## Stats
 
 - **Total skills:** 37
@@ -243,4 +257,4 @@ See [Hermes Agent Skill Creation Guide](https://hermes-agent.nousresearch.com/do
 
 ---
 
-Built for Hermes Agent by Nous Research.
+Built by [Crewm8](https://crewm8.ai) — a free, open-source skill pack for the Hermes Agent ecosystem.
