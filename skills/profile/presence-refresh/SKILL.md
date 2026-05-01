@@ -11,6 +11,9 @@ related_skills: [profile-audit, brand-voice-system, positioning-statement, cta-c
 inputs_required: [current-profile-state, high-performing-posts, campaign-schedule]
 deliverables: [presence-refresh-plan-with-timeline]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: []
+required_env_vars: []
 ---
 
 # Presence Refresh

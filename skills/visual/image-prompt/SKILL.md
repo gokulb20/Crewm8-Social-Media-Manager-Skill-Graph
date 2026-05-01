@@ -11,6 +11,9 @@ related_skills: [visual-plan, asset-format, meme-create]
 inputs_required: [visual-concept-description, style-direction, target-platform, ai-tool-preference]
 deliverables: [generation-prompts-for-1-3-tools]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: []
+required_env_vars: []
 ---
 
 # Image Prompt

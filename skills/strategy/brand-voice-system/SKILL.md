@@ -11,6 +11,9 @@ related_skills: [positioning-statement, content-pillars]
 inputs_required: [social-post-samples, founder-interviews-or-voice-references, existing-brand-guidelines-if-any]
 deliverables: [brand-voice-guide-document]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: ["FIRECRAWL_API_KEY"]
+required_env_vars: ["FIRECRAWL_API_KEY"]
 ---
 
 # Brand Voice System

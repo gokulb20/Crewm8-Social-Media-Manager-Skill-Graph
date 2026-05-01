@@ -11,6 +11,9 @@ related_skills: [hook-write, cta-craft, post-create, visual-plan]
 inputs_required: [visual-asset-description, core-message, target-platform, cta-requirement]
 deliverables: [platform-formatted-caption-with-hashtags]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: []
+required_env_vars: []
 ---
 
 # Caption Draft

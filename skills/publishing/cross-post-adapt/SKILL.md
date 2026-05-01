@@ -11,6 +11,9 @@ related_skills: [post-create, thread-create, caption-draft, schedule-queue, bran
 inputs_required: [source-content, source-platform, target-platforms, core-message]
 deliverables: [platform-native-adaptations-for-each-target]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: []
+required_env_vars: []
 ---
 
 # Cross-Post Adapt

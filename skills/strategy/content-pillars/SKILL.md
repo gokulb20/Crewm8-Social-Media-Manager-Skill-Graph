@@ -11,6 +11,9 @@ related_skills: [positioning-statement, brand-voice-system, content-calendar, ho
 inputs_required: [positioning-statement, audience-research-or-customer-insights]
 deliverables: [content-pillar-document-with-topic-bank]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: ["FIRECRAWL_API_KEY"]
+required_env_vars: ["FIRECRAWL_API_KEY"]
 ---
 
 # Content Pillars

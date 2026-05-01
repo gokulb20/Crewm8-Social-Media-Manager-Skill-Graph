@@ -11,6 +11,9 @@ related_skills: [mention-monitor, dm-respond, apology-draft, impersonator-monito
 inputs_required: [situation-details, sentiment-assessment, escalation-contacts]
 deliverables: [crisis-response-plan-with-drafted-responses]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: ["FIRECRAWL_API_KEY"]
+required_env_vars: ["FIRECRAWL_API_KEY"]
 ---
 
 # Crisis Respond

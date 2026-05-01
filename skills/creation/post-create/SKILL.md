@@ -11,6 +11,9 @@ related_skills: [hook-write, cta-craft, brand-voice-system, caption-draft, cross
 inputs_required: [topic-or-angle, brand-voice-guide, target-platform, desired-cta-type]
 deliverables: [platform-formatted-post-text]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: []
+required_env_vars: []
 ---
 
 # Post Create

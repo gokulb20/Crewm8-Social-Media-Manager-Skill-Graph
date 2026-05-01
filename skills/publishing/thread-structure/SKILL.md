@@ -11,6 +11,9 @@ related_skills: [thread-create, schedule-queue, cta-craft]
 inputs_required: [full-thread-draft, link-for-auto-plug, scheduling-tool]
 deliverables: [thread-spec-with-tweet-sequence-and-auto-plug-config]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: []
+required_env_vars: []
 ---
 
 # Thread Structure

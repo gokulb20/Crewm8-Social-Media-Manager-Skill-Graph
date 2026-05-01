@@ -11,6 +11,9 @@ related_skills: [presence-refresh, brand-voice-system, positioning-statement]
 inputs_required: [profile-urls-per-platform, brand-guidelines-if-available]
 deliverables: [profile-audit-with-consistency-score-and-remediation-plan]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: ["FIRECRAWL_API_KEY"]
+required_env_vars: ["FIRECRAWL_API_KEY"]
 ---
 
 # Profile Audit

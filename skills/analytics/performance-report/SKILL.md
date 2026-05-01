@@ -11,6 +11,9 @@ related_skills: [metrics-track, ab-test-analyze, content-calendar, trending-brie
 inputs_required: [metrics-data-for-period, ab-test-results-if-any, content-calendar-for-reference]
 deliverables: [weekly-monthly-performance-report]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: []
+required_env_vars: []
 ---
 
 # Performance Report

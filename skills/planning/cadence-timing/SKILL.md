@@ -11,6 +11,9 @@ related_skills: [content-calendar, schedule-queue, metrics-track, performance-re
 inputs_required: [audience-geography-data-if-available, platform-analytics-export, past-post-performance-data]
 deliverables: [cadence-and-timing-guide]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: []
+required_env_vars: []
 ---
 
 # Cadence & Timing

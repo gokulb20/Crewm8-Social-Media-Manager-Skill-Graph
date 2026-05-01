@@ -11,6 +11,9 @@ related_skills: [hook-write, cta-craft, post-create, blog-to-thread, thread-stru
 inputs_required: [thread-topic-or-source-material, brand-voice-guide, target-cta]
 deliverables: [full-thread-draft-with-auto-plug-config]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: []
+required_env_vars: []
 ---
 
 # Thread Create

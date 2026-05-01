@@ -11,6 +11,9 @@ related_skills: [metrics-track, hook-write, cta-craft, performance-report]
 inputs_required: [test-hypothesis, test-results-data, control-and-variant-descriptions]
 deliverables: [ab-test-analysis-with-winner-declaration]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: ["EXTERNAL_ANALYTICS_LINK"]
+required_env_vars: ["EXTERNAL_ANALYTICS_LINK"]
 ---
 
 # A/B Test Analyze

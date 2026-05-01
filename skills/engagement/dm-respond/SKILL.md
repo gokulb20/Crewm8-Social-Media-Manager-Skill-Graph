@@ -11,6 +11,9 @@ related_skills: [comment-reply, mention-monitor, crisis-respond]
 inputs_required: [inbound-dms-across-platforms, existing-response-templates-if-any]
 deliverables: [dm-responses-per-category-with-escalation-decisions]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: ["X_API_KEY", "LINKEDIN_ACCESS_TOKEN"]
+required_env_vars: ["X_API_KEY", "LINKEDIN_ACCESS_TOKEN"]
 ---
 
 # DM Respond

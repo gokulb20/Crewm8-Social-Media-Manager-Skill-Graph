@@ -11,6 +11,9 @@ related_skills: [crisis-respond, mention-monitor, apology-draft]
 inputs_required: [brand-handles, platforms-to-monitor]
 deliverables: [impersonation-detection-report-and-escalation-plan]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: ["X_API_KEY"]
+required_env_vars: ["X_API_KEY"]
 requires_capabilities: [web-search]
 ---
 

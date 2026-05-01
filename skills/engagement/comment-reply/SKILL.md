@@ -11,6 +11,9 @@ related_skills: [brand-voice-system, mention-monitor, dm-respond, crisis-respond
 inputs_required: [new-comments-on-brand-posts, target-accounts-for-outbound-engagement]
 deliverables: [reply-drafts-for-inbound-and-outbound-engagement]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: ["X_API_KEY", "LINKEDIN_ACCESS_TOKEN"]
+required_env_vars: ["X_API_KEY", "LINKEDIN_ACCESS_TOKEN"]
 ---
 
 # Comment Reply

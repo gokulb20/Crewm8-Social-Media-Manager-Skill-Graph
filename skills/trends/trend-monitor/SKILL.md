@@ -11,6 +11,9 @@ related_skills: [trending-briefing, news-response, post-create, meme-create, con
 inputs_required: [brand-niche, list-of-key-accounts-to-monitor, platform-access]
 deliverables: [trend-report-with-act-now-recommendations]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: ["FIRECRAWL_API_KEY"]
+required_env_vars: ["FIRECRAWL_API_KEY"]
 requires_capabilities: [web-search, web-extract]
 ---
 
