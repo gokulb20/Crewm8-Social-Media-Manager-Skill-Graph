@@ -11,6 +11,9 @@ related_skills: [image-prompt, asset-format, meme-create, caption-draft, post-cr
 inputs_required: [content-message, brand-visual-guidelines, target-platform, asset-type]
 deliverables: [visual-brief-with-slide-by-slide-copy-and-dimensions]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: []
+required_env_vars: []
 ---
 
 # Visual Plan

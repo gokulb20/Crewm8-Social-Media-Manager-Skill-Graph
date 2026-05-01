@@ -11,6 +11,9 @@ related_skills: [content-pillars, cadence-timing, post-create, thread-create, sc
 inputs_required: [content-pillar-document, cadence-rules, brand-calendar-key-dates, any-upcoming-announcements]
 deliverables: [weekly-monthly-content-calendar]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: []
+required_env_vars: []
 ---
 
 # Content Calendar

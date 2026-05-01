@@ -11,6 +11,9 @@ related_skills: [post-create, thread-create, blog-to-thread, caption-draft]
 inputs_required: [newsletter-full-text, newsletter-subscribe-link, brand-voice-guide]
 deliverables: [multi-post-package-with-posting-sequence]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: ["FIRECRAWL_API_KEY"]
+required_env_vars: ["FIRECRAWL_API_KEY"]
 ---
 
 # Newsletter to Posts

@@ -11,6 +11,9 @@ related_skills: [dm-respond, comment-reply, mention-monitor, brand-voice-system]
 inputs_required: [brand-positioning, target-audience-profile, outreach-budget-or-offer]
 deliverables: [outreach-shortlist-with-personalized-drafts]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: []
+required_env_vars: []
 ---
 
 # Influencer Outreach

@@ -11,6 +11,9 @@ related_skills: [ab-test-analyze, performance-report, cadence-timing]
 inputs_required: [platform-analytics-access, post-list-for-tracking-period]
 deliverables: [metrics-snapshot-with-anomaly-flags]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: ["EXTERNAL_ANALYTICS_LINK"]
+required_env_vars: ["EXTERNAL_ANALYTICS_LINK"]
 ---
 
 # Metrics Track

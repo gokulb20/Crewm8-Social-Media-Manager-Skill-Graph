@@ -11,6 +11,9 @@ related_skills: [brand-voice-system, content-pillars, hook-write]
 inputs_required: [existing-brand-materials, customer-interviews-or-testimonials, competitor-landscape]
 deliverables: [positioning-statement-document]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: ["FIRECRAWL_API_KEY"]
+required_env_vars: ["FIRECRAWL_API_KEY"]
 ---
 
 # Positioning Statement

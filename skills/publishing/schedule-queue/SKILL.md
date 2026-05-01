@@ -11,6 +11,9 @@ related_skills: [content-calendar, cadence-timing, cross-post-adapt, draft-revie
 inputs_required: [approved-posts-per-platform, posting-times, media-assets, scheduling-tool]
 deliverables: [publishing-queue-ready-to-schedule]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: ["BUFFER_API_KEY"]
+required_env_vars: ["BUFFER_API_KEY"]
 ---
 
 # Schedule Queue

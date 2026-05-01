@@ -11,6 +11,9 @@ related_skills: [post-create, thread-create, caption-draft, cta-craft, ab-test-a
 inputs_required: [core-idea-or-topic, target-platform, target-audience-pain-point]
 deliverables: [hook-variations-with-scores-and-recommendations]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: []
+required_env_vars: []
 ---
 
 # Hook Write

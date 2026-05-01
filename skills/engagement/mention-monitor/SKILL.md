@@ -11,6 +11,9 @@ related_skills: [comment-reply, dm-respond, crisis-respond, performance-report]
 inputs_required: [brand-handles-and-keywords-to-monitor, platform-access-per-platform]
 deliverables: [mention-report-with-reply-status-and-sentiment]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: ["X_API_KEY"]
+required_env_vars: ["X_API_KEY"]
 ---
 
 # Mention Monitor

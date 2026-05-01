@@ -44,6 +44,25 @@ flowchart TD
   PA["profile-audit"]
   PRF["presence-refresh"]
 
+  subgraph research["🔍 Research"]
+    PSA["prospect-social-audit"]
+    SPD["social-profile-discover"]
+    CCA["competitor-content-audit"]
+  end
+
+  subgraph strategy["🎯 Strategy"]
+    BV
+    PS
+    CP
+    CT
+    CSB["crm-social-bridge"]
+  end
+
+  SPD --> PSA
+  PSA --> CSB
+  CCA --> CP
+  CCA --> BV
+
   BV --> CC
   PS --> CC
   CP --> CC

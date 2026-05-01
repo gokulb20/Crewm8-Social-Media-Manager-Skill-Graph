@@ -11,6 +11,9 @@ related_skills: [trend-monitor, news-response, performance-report, content-calen
 inputs_required: [trend-monitor-outputs, news-response-outputs, competitor-activity, audience-conversations]
 deliverables: [founder-facing-briefing-daily-or-weekly]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: []
+required_env_vars: []
 ---
 
 # Trending Briefing

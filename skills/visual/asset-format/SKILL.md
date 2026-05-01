@@ -11,6 +11,9 @@ related_skills: [visual-plan, image-prompt, meme-create]
 inputs_required: [target-platform, content-type, source-asset-info-if-resizing]
 deliverables: [asset-format-spec-with-dimensions-and-safe-zones]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: []
+required_env_vars: []
 ---
 
 # Asset Format

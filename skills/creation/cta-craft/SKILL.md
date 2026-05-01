@@ -11,6 +11,9 @@ related_skills: [post-create, thread-create, caption-draft, ab-test-analyze, hoo
 inputs_required: [post-goal, content-value-level, target-platform, desired-action-type]
 deliverables: [cta-text-with-placement-and-rationale]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: []
+required_env_vars: []
 ---
 
 # CTA Craft

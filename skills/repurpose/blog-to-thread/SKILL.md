@@ -11,6 +11,9 @@ related_skills: [thread-create, hook-write, cta-craft, newsletter-to-posts]
 inputs_required: [blog-post-url-or-full-text, target-cta]
 deliverables: [thread-draft-with-traffic-strategy]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: ["FIRECRAWL_API_KEY"]
+required_env_vars: ["FIRECRAWL_API_KEY"]
 ---
 
 # Blog to Thread

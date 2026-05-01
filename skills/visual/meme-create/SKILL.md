@@ -11,6 +11,9 @@ related_skills: [brand-voice-system, visual-plan, image-prompt, asset-format, tr
 inputs_required: [meme-opportunity-context, brand-humor-boundaries, target-platform]
 deliverables: [meme-concept-with-text-overlay-and-risk-assessment]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: ["FIRECRAWL_API_KEY"]
+required_env_vars: ["FIRECRAWL_API_KEY"]
 ---
 
 # Meme Create

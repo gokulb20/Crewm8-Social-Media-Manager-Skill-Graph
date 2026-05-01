@@ -11,6 +11,9 @@ related_skills: [post-create, caption-draft, visual-plan, newsletter-to-posts]
 inputs_required: [podcast-or-interview-transcript, full-episode-url, guest-handle-or-bio]
 deliverables: [clip-inventory-with-posting-schedule]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 1
+required_tools: ["FIRECRAWL_API_KEY"]
+required_env_vars: ["FIRECRAWL_API_KEY"]
 ---
 
 # Podcast to Clips

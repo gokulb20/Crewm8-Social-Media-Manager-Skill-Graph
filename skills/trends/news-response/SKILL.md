@@ -11,6 +11,9 @@ related_skills: [trend-monitor, post-create, brand-voice-system, trending-briefi
 inputs_required: [news-item-url-or-summary, brand-positioning, perspective-or-take]
 deliverables: [news-response-draft-ready-to-post]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: ["FIRECRAWL_API_KEY"]
+required_env_vars: ["FIRECRAWL_API_KEY"]
 requires_capabilities: [web-search, web-extract]
 ---
 

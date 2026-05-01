@@ -11,6 +11,9 @@ related_skills: [crisis-respond, brand-voice-system, draft-review]
 inputs_required: [situation-summary, severity-assessment, founder-availability]
 deliverables: [apology-draft-with-language-audit-and-review-gate]
 compatible_agents: [hermes, claude-code, droid, cursor, windsurf, openai, openclaw, generic]
+execution_tier: 2
+required_tools: []
+required_env_vars: []
 ---
 
 # Apology Draft
