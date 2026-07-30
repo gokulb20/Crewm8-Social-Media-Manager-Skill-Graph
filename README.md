@@ -1,6 +1,6 @@
 # Crewm8 Social Skill Graph
 
-**A complete social media operator's playbook — 37 skills, 12 functions, any agent.**
+**A complete social media operator's playbook — 41 skills, 13 categories, any agent.**
 
 > Built by [Crewm8](https://crewm8.ai) — a free, open-source skill graph for the agent ecosystem. Works with Hermes Agent, Claude Code, Factory Droid, Cursor, Windsurf, OpenClaw, OpenAI agents, and any markdown-skill-aware agent.
 
@@ -8,9 +8,9 @@
 
 ## What This Is
 
-37 discrete, agent-agnostic skills covering every function of startup social media management — from brand strategy and content creation through publishing, engagement, analytics, and crisis management. Each skill works independently and chains together for automated workflows.
+41 discrete, agent-agnostic skills covering every function of startup social media management — from brand strategy and research through publishing, engagement, analytics, and crisis management. Each skill works independently and chains together for automated workflows.
 
-- **37 SKILL.md files** organized into 12 categories
+- **41 SKILL.md files** organized into 13 categories
 - **4 platforms:** X, LinkedIn, Instagram, TikTok
 - **Agent-agnostic:** No agent-specific metadata. Universal YAML format.
 - **Open source:** MIT license. Built by Crewm8. Free for any agent to use.
@@ -66,7 +66,15 @@ flowchart TD
   IM["impersonator-monitor"]
   PA["profile-audit"]
   PRF["presence-refresh"]
+  SPD["social-profile-discover"]
+  PSA["prospect-social-audit"]
+  CCA["competitor-content-audit"]
+  CSB["crm-social-bridge"]
 
+  SPD --> PSA
+  PSA --> CSB
+  CCA --> CP
+  CCA --> BV
   BV --> CC
   PS --> CC
   CP --> CC
@@ -115,7 +123,7 @@ flowchart TD
 ### Hermes Agent
 ```bash
 hermes skills tap add gokulb20/Crewm8-Social-Media-Manager-Skill-Graph
-hermes skills install gokulb20/.../skills/strategy/brand-voice-system
+hermes skills install gokulb20/Crewm8-Social-Media-Manager-Skill-Graph/skills/strategy/brand-voice-system
 ```
 
 ### Claude Code
@@ -143,7 +151,7 @@ Clone the repository and point OpenClaw at the `skills/` directory. Each SKILL.m
 Upload individual SKILL.md files as knowledge base documents. No special configuration needed.
 
 ### Any markdown-aware agent
-Point your agent at the `skills/` directory. Flat YAML frontmature (`name`, `description`, `tags`) is the universal standard.
+Point your agent at the `skills/` directory. Flat YAML frontmatter (`name`, `description`, `tags`) is the universal standard.
 
 Full per-agent install guides: `docs/install-*.md`
 
@@ -157,6 +165,7 @@ Full per-agent install guides: `docs/install-*.md`
 | 1 | brand-voice-system | Extract brand voice, build do/don't guide, detect drift | Content samples, founder voice refs | Voice guide document |
 | 2 | positioning-statement | Craft elevator pitch and niche positioning | Brand materials, customer interviews | Positioning document |
 | 3 | content-pillars | Define 3-5 pillars and topic taxonomy | Positioning, audience insights | Pillar document + topic bank |
+| 38 | crm-social-bridge | Rank CRM prospects for social engagement | CRM prospect list, target platforms | Prioritized engagement queue |
 
 ### Planning
 | # | Skill | Description | Inputs Required | Delivers |
@@ -236,6 +245,13 @@ Full per-agent install guides: `docs/install-*.md`
 | 36 | profile-audit | Cross-platform consistency check | Profile URLs | Audit + remediation plan |
 | 37 | presence-refresh | Bio optimization + pinned post rotation | Current state, campaign schedule | Refresh plan |
 
+### Research
+| # | Skill | Description | Inputs Required | Delivers |
+|---|-------|-------------|----------------|----------|
+| 39 | social-profile-discover | Find and verify canonical social profiles | Name, company or context, search scope | Verified profile URLs |
+| 40 | prospect-social-audit | Score a prospect's social presence and activity | Company name, website, founder name | Social presence report |
+| 41 | competitor-content-audit | Analyze competitor content, cadence, and voice | Competitor name, handles, audit period | Competitive content report |
+
 ---
 
 ## Chained Workflow: Weekly Content Cycle
@@ -304,9 +320,9 @@ Body sections: **Purpose → When to Use → Inputs Required → Quick Reference
 
 | | |
 |---|---|
-| Skills | 37 |
-| Categories | 12 |
+| Skills | 41 |
+| Categories | 13 |
 | Platforms | 4 (X, LinkedIn, IG, TikTok) |
 | Compatible agents | All major markdown-skill-aware agents |
-| Lines of instruction | ~11,000 |
+| Lines of instruction | ~5,900 |
 | License | MIT |

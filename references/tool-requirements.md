@@ -24,8 +24,8 @@ Skills that require manual platform interaction or auth flows agents can't compl
 ### X (Twitter)
 | Method | Tool | Auth Required | Notes |
 |--------|------|--------------|-------|
-| X API v2 (Free) | `curl` + Bearer token | X_BEARER_TOKEN from developer portal | 1,500 tweets/month POST, 100 GET/15min |
-| X API v2 (Basic) | `curl` + Bearer token | $100/month | 3,000 tweets/month POST, 10,000 GET/month |
+| Hermes Tweet 0.1.11 | `tweet_explore`, `tweet_read`, `tweet_action` | None for catalog search; `XQUIK_API_KEY` for live calls | Native Hermes route. Actions stay disabled unless `HERMES_TWEET_ENABLE_ACTIONS=true`. |
+| [X API v2](https://docs.x.com/x-api/getting-started/pricing) | `curl` + OAuth or Bearer token | Developer app credentials | Pay per usage. Limits vary by endpoint; check the [current rate table](https://docs.x.com/x-api/fundamentals/rate-limits). |
 | Browser (read-only) | `browser_navigate` → `browser_snapshot` | Logged-in session cookie | No posting, good for trending/monitoring |
 | Trends24 | `browser_navigate` → trends24.in | None | Trending topics snapshot |
 | Nitter (public instances) | `curl` or `browser_navigate` | None | Read-only, no auth, may be blocked |
@@ -69,7 +69,9 @@ Create a `.env` or export these before running skills:
 ```bash
 # Required for Tier 1 execution
 export FIRECRAWL_API_KEY="fc-..."           # Website scraping and search
-export X_BEARER_TOKEN="AAAAAAAA..."          # X API v2 (free tier)
+export X_BEARER_TOKEN="AAAAAAAA..."          # X API v2 app authentication
+export XQUIK_API_KEY="xq_YOUR_KEY"            # Hermes Tweet authenticated reads
+export HERMES_TWEET_ENABLE_ACTIONS="false"    # Keep private reads and mutations disabled
 
 # Optional — enables more platforms/features
 export LINKEDIN_ACCESS_TOKEN="..."           # LinkedIn API
@@ -95,3 +97,6 @@ required_tools: [web_search, web_extract]  # from this reference
 required_env_vars: [FIRECRAWL_API_KEY, X_BEARER_TOKEN]
 fallback_if_unavailable: "Use browser_navigate to X.com/explore/tabs/trending instead of API"
 ```
+
+Xquik is an independent third-party service. Not affiliated with X Corp.
+"Twitter" and "X" are trademarks of X Corp.
